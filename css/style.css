@@ -1251,21 +1251,28 @@ body {
 .porfolio-list {
   display: flex;
   flex-wrap: wrap;
-  
-}
+  }
 
-@media screen and (min-width: 1200px){
-.porfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
+@media screen and (min-width: 768px){
+  .porfolio-list{
+    gap: 24px;
 }
 }
-/* .portfolio-list-item {
-  flex-basis: calc((100% - 48px) / 3);
+.portfolio-list-item {
   border: 0.5px solid var(--light);
   box-shadow: 0px 1px 6px var(--shadow1);
-} */
+}
+@media screen and (min-width: 768px){
+  .portfolio-list-item {
+  flex-basis: calc((100% - 24px) / 2);
+  }
+}
+@media screen and (min-width: 1200px){
+  .portfolio-list-item{
+      flex-basis: calc((100% - 48px) / 3);
+  }
+}
+
 .portfolio-link {
   display: block;
   color: var(--text);
