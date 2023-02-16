@@ -61,19 +61,27 @@
           type="button"
           class="mobile-menu-button js-open-menu"
           aria-label="open menu"
-                  >
-         <svg class="menu-icon" width="32" height="22">
-           <use href="./images/icons/menu-burger.svg"></use>
-         </svg>
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-burger" width="32px" height="22px">
+            <use href="./images/icons.svg#menu-burger"></use>
+          </svg>
         </button>
       </div>
 
-      <div class="mobile-menu  container js-menu-container" id="mobile-menu" >
-        <button class="mobile-close-btn js-close-menu" aria-label="close" >
+      <div class="mobile-menu js-menu-container" id="mobile-menu">
+        <button
+          class="mobile-close-btn js-close-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="close"
+        >
           <svg width="8px" height="8px">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
+
         <ul class="list mobile-menu-list">
           <li class="mobile-menu-item">
             <a class="link mobile-menu-list-link" href="./index.html">Studio</a>
@@ -156,10 +164,10 @@
         </div>
       </div>
     </header>
-    
+
     <main>
-    <!-- Hero  -->
-    <section class="hero-bgd">
+      <!-- Hero  -->
+      <section class="hero-bgd">
         <div class="container hero-box">
           <h1 class="main-title">Effective Solutions for Your Business</h1>
           <button class="button" type="button" data-modal-open>
@@ -168,8 +176,8 @@
         </div>
       </section>
 
-    <!-- Benefits -->
-    <section class="section">
+      <!-- Benefits -->
+      <section class="section">
         <div class="container">
           <h2 class="hidden">Benefits</h2>
           <ul class="list benefits-box">
@@ -225,36 +233,72 @@
         </div>
       </section>
 
-    <!-- What are we doing -->
-    <section class="section we-doing-container">
+      <!-- What are we doing -->
+      <section class="section we-doing-container">
         <div class="container">
           <h2 class="secondary-title">What are we doing</h2>
           <ul class="list we-doing-box card-set">
             <li class="we-doing-box-item card-set-item">
-              <img src="./images/img-comp.jpg" alt="Computer" width="360" />
+              <picture>
+                <source srcset="./images/we-are-doing/image1@2x.jpg 2x" />
+                <img
+                  src="./images/we-are-doing/image1.jpg "
+                  alt="Computer"
+                  width="360"
+                />
+              </picture>
             </li>
             <li class="we-doing-box-item card-set-item">
-              <img src="./images/img-tablet.jpg" alt="Tablet" width="360" />
+              <picture> 
+                <source srcset="./images/we-are-doing/image2@2x.jpg 2x">
+                 <img src="./images/we-are-doing/image2.jpg" alt="Tablet" width="360" />
+              </picture>
+             
             </li>
             <li class="we-doing-box-item card-set-item">
-              <img src="./images/img-phone.jpg" alt="Phone" width="360" />
+                  <picture> 
+                <source srcset="./images/we-are-doing/image3@2x.jpg 2x">
+                 <img src="./images/we-are-doing/image3.jpg" alt="Phone" width="360" />
+              </picture>
+            
             </li>
           </ul>
         </div>
       </section>
 
-    <!-- Team -->
-    <section class="team section">
+      <!-- Team -->
+      <section class="team section">
         <div class="container">
           <h2 class="secondary-title">Our Team</h2>
           <ul class="list team-box card-set">
             <li class="team-box-item card-set-item">
-              <img
-                src="./images/team/card-a.jpg"
-                alt="Photo by Mark Guerrero"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/desktop/team1.jpg    1x,
+                    ./images/team/desktop/team1@2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/team1.jpg    1x,
+                    ./images/team/tablet/team1@2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./images/team/mobile/team1@2x.jpg 2x"
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./images/team/mobile/team1.jpg"
+                  alt="Photo by Mark Guerrero"
+                  width="264"
+                  height="260"
+                />
+              </picture>
+
               <div class="team-card-name">
                 <h3 class="third-title">Mark Guerrero</h3>
                 <p class="paragraph">Product Designer</p>
@@ -316,12 +360,33 @@
               </ul>
             </li>
             <li class="team-box-item card-set-item">
-              <img
-                src="./images/team/card-b.jpg"
-                alt="Photo by Tom Ford"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/desktop/team2.jpg    1x,
+                    ./images/team/desktop/team2@2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/team2.jpg    1x,
+                    ./images/team/tablet/team2@2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./images/team/mobile/team2@2x.jpg 2x"
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./images/team/mobile/team2.jpg"
+                  alt="Photo by Tom Ford"
+                  width="264"
+                  height="260"
+                />
+              </picture>
+
               <div class="team-card-name">
                 <h3 class="third-title">Tom Ford</h3>
                 <p class="paragraph">Frontend Developer</p>
@@ -382,12 +447,33 @@
               </ul>
             </li>
             <li class="team-box-item card-set-item">
-              <img
-                src="./images/team/card-c.jpg"
-                alt="Photo by Camila Garcia"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/desktop/team3.jpg    1x,
+                    ./images/team/desktop/team3@2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/team3.jpg    1x,
+                    ./images/team/tablet/team3@2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./images/team/mobile/team3@2x.jpg 2x"
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./images/team/mobile/team3.jpg"
+                  alt="Photo by Camila Garcia"
+                  width="264"
+                  height="260"
+                />
+              </picture>
+
               <div class="team-card-name">
                 <h3 class="third-title">Camila Garcia</h3>
                 <p class="paragraph">Marketing</p>
@@ -448,12 +534,33 @@
               </ul>
             </li>
             <li class="team-box-item card-set-item">
-              <img
-                src="./images/team/cdrd-d.jpg"
-                alt="Photo by Daniel Wilson"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/desktop/team4.jpg    1x,
+                    ./images/team/desktop/team4@2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/team4.jpg    1x,
+                    ./images/team/tablet/team4@2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./images/team/mobile/team4@2x.jpg 2x"
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./images/team/mobile/team4.jpg"
+                  alt="Photo by Daniel Wilson"
+                  width="264"
+                  height="260"
+                />
+              </picture>
+              4
               <div class="team-card-name">
                 <h3 class="third-title">Daniel Wilson</h3>
                 <p class="paragraph">UI Designer</p>
@@ -517,8 +624,8 @@
         </div>
       </section>
 
-    <!-- Customers -->
-    <section class="section customers">
+      <!-- Customers -->
+      <section class="section customers">
         <div class="container">
           <h2 class="secondary-title">Customers</h2>
           <ul class="list customers-list">
@@ -702,16 +809,16 @@
     </footer>
 
     <!-- Modal -->
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal is-hidden">
         <button class="close-btn" aria-label="close" data-modal-close>
           <svg width="8px" height="8px">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
-        </button> -->
+        </button>
 
-    <!-- Modal form -->
-    <!-- <b class="modal-text">Leave your contacts and we will call you back</b>
+        <!-- Modal form -->
+        <b class="modal-text">Leave your contacts and we will call you back</b>
         <form class="modal-form">
           <label class="modal-form-field" for="user_name">
             <span class="modal-form-input-desc modal-form-input-desc-name"
@@ -785,7 +892,12 @@
                 <use href="./images/icons.svg#icon-check"></use></svg
             ></span>
             I accept the terms and conditions of the&nbsp;
-            <a class="modal-link" href="#" target="_blank"  rel="noopener norefferrer">Privacy Policy</a
+            <a
+              class="modal-link"
+              href="#"
+              target="_blank"
+              rel="noopener norefferrer"
+              >Privacy Policy</a
             >
           </label>
           <button class="button modal-button" type="submit">Send</button>
@@ -793,7 +905,13 @@
       </div>
     </div>
 
-    <script src="./js/modal.js"></script> -->
-    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
