@@ -65,6 +65,10 @@ p {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
+
+  object-fit: cover;
+  object-position: center;
 }
 
 /* ----------*/
@@ -183,13 +187,7 @@ body {
   padding-right: 16px;
   padding-left: 16px;
 }
-/* @media screen and (min-width: 480px) {
-  .container {
-    min-width: 480px;
-    margin-left: auto;
-  margin-right: auto;
-      }
-} */
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
@@ -216,8 +214,6 @@ body {
   .section {
     padding-top: 120px;
     padding-bottom: 120px;
-    /* padding-left: 156px;
-    padding-right: 156px; */
   }
 }
 
@@ -492,7 +488,7 @@ body {
   |============================
 */
 .hero-bgd {
-  max-width: 480px;
+  max-width: 1440px;
   margin-right: auto;
   margin-left: auto;
   padding-top: 112px;
@@ -514,9 +510,8 @@ body {
       url('../images/hero/mobile-bg@2x.jpg');
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 481px) {
   .hero-bgd {
-    max-width: 768px;
     padding-bottom: 108px;
 
     background-color: var(--dark);
@@ -532,9 +527,8 @@ body {
     }
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 769px) {
   .hero-bgd {
-    max-width: 1440px;
     margin-right: auto;
     margin-left: auto;
     padding-top: 188px;
@@ -1199,7 +1193,7 @@ body {
 */
 .portfolio-page {
   padding-top: 0;
- }
+}
 
 /* -----Filter----- */
 .filter-list {
@@ -1251,25 +1245,25 @@ body {
 .porfolio-list {
   display: flex;
   flex-wrap: wrap;
-  }
-
-@media screen and (min-width: 768px){
-  .porfolio-list{
-    gap: 24px;
 }
+
+@media screen and (min-width: 768px) {
+  .porfolio-list {
+    gap: 24px;
+  }
 }
 .portfolio-list-item {
   border: 0.5px solid var(--light);
   box-shadow: 0px 1px 6px var(--shadow1);
 }
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
   .portfolio-list-item {
-  flex-basis: calc((100% - 24px) / 2);
+    flex-basis: calc((100% - 24px) / 2);
   }
 }
-@media screen and (min-width: 1200px){
-  .portfolio-list-item{
-      flex-basis: calc((100% - 48px) / 3);
+@media screen and (min-width: 1200px) {
+  .portfolio-list-item {
+    flex-basis: calc((100% - 48px) / 3);
   }
 }
 
